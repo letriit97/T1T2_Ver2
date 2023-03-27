@@ -1,0 +1,50 @@
+export interface T1DeliveryParamSearch {
+    t2Mtl_No: string;
+    t1Mtl_No: string;
+    kind: string;
+    pur_NO: string;
+    supplier_NO: string;
+    supplierId: string;
+    supplierNo: string;
+    category: string;
+}
+export interface T1DeliveryExportParam extends T1DeliveryParamSearch {
+    factory_Code: string;
+    t2_Confirm_Delivery_Date: string;
+    confirm_Turnover_Date: string;
+    purDate: string;
+    cRD: string;
+    t1_RTD: string;
+    confirm_Type: string;
+    initial_Working_Start_Date: string;
+    working_Start_Date: string;
+    working_Category: string;
+    forming_Date: string;
+    lean: string;
+    pO: string;
+    batch: string;
+    model_NO: string;
+    model_Name: string;
+    aRT: string;
+    batch_Qty: string;
+    pur_No1: string;
+    kind1: string;
+    supplier_No1: string;
+    supplier_Name: string;
+    toolNo: string;
+    toolClass: string;
+    subconDesc: string;
+    t2Mtl_No1: string;
+    t2Mtl_Name: string;
+    t1Mtl_No1: string;
+    t1Mtl_Name: string;
+    t2_PPA: string;
+    mould_TotalQty: string;
+    month_Qty: string;
+    t2OrderQty: string;
+    unit: string;
+    memo: string;
+    totalSizeControl: string;
+    updatedBy: string;
+    updateTime: string;
+}

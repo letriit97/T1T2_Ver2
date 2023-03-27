@@ -1,0 +1,83 @@
+<div class="app-body">
+  <main class="main d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mx-auto">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-7 mx-auto">
+          <div class="card-group">
+            <div class="card p-4">
+              <div class="card-body">
+                <div class="login-title">
+                  <img src="assets/img/logo/logo.png" alt="">
+                  <span>T1T2 System</span>
+                </div>
+                <form (ngSubmit)="login()" #form="ngForm" autocomplete="off">
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label">{{'Auth.Language' | translate}}</label>
+                    <div class="col-md-9">
+                      <ng-select [(ngModel)]="country" name="lang" required (ngModelChange)="countryChanged()"
+                        [placeholder]="'Auth.PleaseSelect' | translate" [clearable]="false">
+                        <ng-option *ngFor="let item of countries" [value]="item.key">{{item.value | uppercase}}</ng-option>
+                      </ng-select>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label">{{'Auth.Supplier' | translate}}</label>
+                    <div class="col-md-4">
+                      <ng-select [(ngModel)]="param.doman" name="domains" required (ngModelChange)="getSuppliers()"
+                        [placeholder]="'Auth.PleaseSelect' | translate" [clearable]="false">
+                        <ng-option *ngFor="let domain of domains" [value]="domain.key">{{domain.value}}</ng-option>
+                      </ng-select>
+                    </div>
+                    <div class="col-md-5">
+                      <ng-select [(ngModel)]="param.supplier_ID" name="supplier_ID" required [clearable]="false"
+                        [disabled]="suppliers.isDisabled" [placeholder]="'Auth.PleaseSelect' | translate">
+                        <ng-option *ngFor="let supplier of suppliers.suppliers" [value]="supplier.key">
+                          {{supplier.value}}</ng-option>
+                      </ng-select>
+                    </div>
+                  </div>
+
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-user"></i></span>
+                    </div>
+                    <input type="text" class="form-control" [placeholder]="'Auth.Username' | translate"
+                      [(ngModel)]="param.userName"
+                      name="username" required>
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                    </div>
+                    <input type="password" class="form-control" [placeholder]="'Auth.Password' | translate"
+                      [(ngModel)]="param.passWord"
+                      name="password" [required]="param.doman !== 'UOF'">
+                  </div>
+                  <!-- <div class="form-group row">
+                    <div class="col-md-8">
+                      <div class="form-check form-check-inline mr-1">
+                        <input class="form-check-input" name="rememberMe" [(ngModel)]="param.rememberMe" type="checkbox"
+                          id="inline-checkbox1">
+                        <label class="form-check-label" for="inline-checkbox1">{{'Auth.RememberMe' | translate}}</label>
+                      </div>
+                    </div>
+                  </div> -->
+                  <div class="d-block text-right">
+                    <button type="submit" class="btn btn-primary" [disabled]="!form.valid">
+                      {{'Auth.SignIn' | translate}}
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

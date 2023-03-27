@@ -1,0 +1,120 @@
+// Here you can add other styles
+@import "bootstrap/scss/variables";
+
+body {
+  position: relative;
+}
+
+button {
+  white-space: nowrap;
+}
+
+.button-translate:focus {
+  outline: none;
+}
+
+.img-translate {
+  width: 40px;
+  height: 40px;
+}
+
+table {
+
+  // min-width: 1600px;
+  &.table,
+  &.p-datatable-table {
+    thead {
+      background-color: $primary;
+      color: $white;
+
+      th {
+        border: 1px solid $secondary  !important;
+
+        &.p-element {
+          background-color: unset !important;
+          color: unset !important;
+          padding: 0.75rem !important;
+          font-size: 0.875rem;
+          font-weight: bold;
+        }
+
+        &.p-sortable-column,
+        &.p-sortable-column.p-highlight {
+          .p-sortable-column-icon {
+            color: $white  !important;
+          }
+
+          &:focus {
+            box-shadow: unset !important;
+          }
+        }
+      }
+    }
+
+    tbody {
+      td {
+        border: 1px solid $secondary  !important;
+        padding: 0.75rem !important;
+      }
+    }
+  }
+
+  &.p-datatable-table {
+    thead.p-datatable-thead {
+      border: 1px solid $secondary;
+
+      th.p-sortable-column {
+        background-color: $primary;
+        color: $white;
+        border: 1px solid $white;
+
+        &:focus {
+          box-shadow: unset;
+        }
+
+        i.p-sortable-column-icon {
+          color: $white;
+        }
+      }
+    }
+
+    tbody.p-datatable-tbody {
+      td {
+        border: 1px solid $secondary;
+      }
+    }
+  }
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.9);
+  -webkit-transform: scale(1.9);
+  transform: scale(1.2);
+}
+
+.ng-select-disabled .ng-select-container {
+  background-color: #e4e7ea !important;
+}
+
+.ng-dropdown-panel.ng-select-top {
+  margin-bottom: 0 !important;
+}
+
+table.modSelect {
+  min-width: auto !important;
+}
+.modal {
+  z-index: 1050 !important;
+}
+
+.checkAll .custom-control-input:checked~.custom-control-label::before {
+  border-color: #fff;
+}
+
+.w-150{
+  width: 150% !important;
+}
+
+.btn-action {
+  width: 1rem;
+}

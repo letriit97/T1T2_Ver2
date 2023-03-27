@@ -1,0 +1,66 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@services/*": [
+        "src/app/_core/_services/*"
+      ],
+      "@models/*": [
+        "src/app/_core/_models/*"
+      ],
+      "@constants/*": [
+        "src/app/_core/_constants/*"
+      ],
+      "@utilities/*": [
+        "src/app/_core/_helpers/utilities/*"
+      ],
+      "@guards/*": [
+        "src/app/_core/_guards/*"
+      ],
+      "@params/*": [
+        "src/app/_core/_helpers/params/*"
+      ],
+      "@resolvers/*": [
+        "src/app/_core/_resolvers/*"
+      ],
+      "@pipes/*": [
+        "src/app/_core/_pipe/*"
+      ],
+      "@env/*": [
+        "src/environments/*"
+      ]
+    },
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": false,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2020",
+    "module": "es2020",
+    "lib": [
+      "es2018",
+      "dom"
+    ]
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": false,
+    "strictInputAccessModifiers": false,
+    "strictTemplates": false
+  },
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.spec.json" },
+  ]
+}

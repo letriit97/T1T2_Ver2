@@ -1,0 +1,30 @@
+export interface T2DeliveryParam {
+  po: string;
+  from_Date: string | null;
+  to_Date: string | null;
+  supplier_NO: string;
+  supplier_Name: string;
+  batch: string;
+  pur_NO: string;
+  label_Delivery_ID: string;
+  label_PO: string;
+  label_Batch: string;
+  label_Pur_NO: string;
+  label_Model_Name: string;
+  label_Model_NO: string;
+  label_Art: string;
+  label_Part: string;
+  label_PartName: string;
+  label_T1Mtl_No: string;
+  label_T1_Request_Date: string;
+  label_Batch_Qty: string;
+  label_Delivery_Qty: string;
+  label_Kind: string;
+  label_Supplier_Name: string;
+  label_Feedback: string;
+  label_Qty: string;
+  label_Production_Qty: string;
+  label_Tool_Size_Deficit: string;
+  label_Delivery_No: string;
+  label_Status: string;
+}
